@@ -32,5 +32,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   globepay_project:
     # Config indicated by + and applies to all files under models/example/
-    example:
+    datamart:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    stage:
       +materialized: view
